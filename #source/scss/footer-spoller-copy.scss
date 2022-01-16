@@ -1,0 +1,84 @@
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1110px; //изменяются в зависимости от макета
+$md1: 1200px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+$color_1: #4985ff;
+$color_2: #323232;
+$color_3: #999999;
+$color_4: #e0e0e0;
+$color_5: #F6F6F8;
+$color_6: #FFFFFF;
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_5;
+    padding: 0% 5%;
+    &__container {
+        max-width: $maxWidthContainer;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $color_4;
+    }
+    &__item {
+        flex-direction: column;
+        align-content: flex-start;
+        text-align: left;
+        padding: 50px;
+    }
+    button {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        color: $color_2;
+        text-align: left;
+        background-color: $color_5;
+        display: inline-block;
+        margin: 10px 10px 20px -20px;
+    }
+    ul {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        color: $color_3;
+        // text-align: left;
+        li {
+            text-align: left;
+            list-style-image: url("../img/footer/Vector.png");
+            padding: 10px 10px 10px 10px;
+            margin-left: 0px;
+            a {
+                color: $color_3;
+            }
+        }
+        .contact-link {
+            &__email {
+                list-style-image: url("../img/footer/envelope.png");
+            }
+            &__phone {
+                list-style-image: url("../img/footer/phone.png");
+            }
+            &__address {
+                list-style-image: url("../img/footer/placeholder.png");
+            }
+        }
+    }
+    &__copy {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        color: $color_3;
+        text-align: center;
+        padding: 30px;
+    }
+}

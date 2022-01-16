@@ -1,0 +1,107 @@
+@import "variables.scss";
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_5;
+    padding: 0% 5%;
+    &__menu {
+        max-width: $maxWidthContainer;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; //
+        border-bottom: 1px solid $color_4;
+        padding: 45px 0 45px 0;
+        margin: 0px auto;
+        @media (max-width: $md2) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 25px 0 0px 0;
+        }
+        @media (max-width: $md3) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__menu-list {
+        max-width: 255px;
+        flex-direction: column;
+        align-content: flex-start;
+        text-align: left;
+        flex: 0 0 0 25%;
+        margin: 25px;
+        position: relative;
+    }
+    &__menu-list>li:hover .footer__sub-menu-list {
+        display: block;
+        background-color: #4985ff;
+    }
+    &__menu-list-title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        color: $color_2;
+        text-align: left;
+        white-space: nowrap;
+        margin: 10px 10px 20px 0px;
+    }
+    &__sub-menu-list {
+        display: none;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        padding: 20px 0px 0px 0px;
+        max-width: 300px;
+        border-color: #4985ff;
+    }
+    &__sub-menu-link {
+        // display: inline-block;
+    }
+    ul {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        color: $color_3;
+        // text-align: left;
+        padding: 0px 20px;
+        li {
+            text-align: left;
+            list-style-image: url("../img/footer/Vector.png");
+            padding: 15px 10px 15px 15px;
+            margin-left: 0px;
+            white-space: nowrap;
+            position: relative;
+            a {
+                color: $color_3;
+            }
+        }
+        .contact-link {
+            &__email {
+                list-style-image: url("../img/footer/envelope.png");
+            }
+            &__phone {
+                list-style-image: url("../img/footer/phone.png");
+            }
+            &__address {
+                list-style-image: url("../img/footer/placeholder.png");
+            }
+        }
+    }
+    &__copy {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        color: $color_3;
+        text-align: center;
+        padding: 30px;
+    }
+}
