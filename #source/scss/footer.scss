@@ -6,102 +6,81 @@
     align-items: center;
     background-color: $color_5;
     padding: 0% 5%;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: $color_3;
     &__menu {
-        max-width: $maxWidthContainer;
-        height: auto;
+        // max-width: $maxWidthContainer;
+        border-bottom: 1px solid $color_4;
+        padding: 45px 0px 45px 0px;
+    }
+    &__menu-list {
         display: flex;
         flex-direction: row;
-        align-items: flex-start; //
-        border-bottom: 1px solid $color_4;
-        padding: 45px 0 45px 0;
-        margin: 0px auto;
-        @media (max-width: $md2) {
+        align-items: flex-start;
+        text-align: left;
+        @media (max-width: 1200px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            padding: 25px 0 0px 0;
+            padding: 0% 10%;
         }
-        @media (max-width: $md3) {
+        @media (max-width: 767.98px) {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 0% 0%;
         }
     }
-    &__menu-list {
-        max-width: 255px;
-        flex-direction: column;
-        align-content: flex-start;
-        text-align: left;
-        flex: 0 0 0 25%;
-        margin: 25px;
-        position: relative;
-    }
-    &__menu-list>li:hover .footer__sub-menu-list {
-        display: block;
-        background-color: #4985ff;
-    }
-    &__menu-list-title {
+    &__menu-list>li {}
+    &__menu-link {
         font-size: 18px;
-        font-style: normal;
         font-weight: 600;
         line-height: 22px;
-        letter-spacing: 0em;
-        color: $color_2;
-        text-align: left;
+        color: #000000;
         white-space: nowrap;
-        margin: 10px 10px 20px 0px;
+        margin: 10px 10px 10px 0px;
+        position: relative;
+        min-width: 255px;
+        padding-bottom: 20px;
     }
     &__sub-menu-list {
-        display: none;
-        position: absolute;
-        left: 10px;
-        top: 20px;
-        padding: 20px 0px 0px 0px;
-        max-width: 300px;
-        border-color: #4985ff;
+        padding: 0px 0px 10px 0px;
+        font-weight: 400;
     }
     &__sub-menu-link {
-        // display: inline-block;
-    }
-    ul {
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0em;
+        padding: 30px 10px 0px 0px;
         color: $color_3;
-        // text-align: left;
-        padding: 0px 20px;
-        li {
-            text-align: left;
-            list-style-image: url("../img/footer/Vector.png");
-            padding: 15px 10px 15px 15px;
-            margin-left: 0px;
-            white-space: nowrap;
-            position: relative;
-            a {
-                color: $color_3;
-            }
-        }
-        .contact-link {
-            &__email {
-                list-style-image: url("../img/footer/envelope.png");
-            }
-            &__phone {
-                list-style-image: url("../img/footer/phone.png");
-            }
-            &__address {
-                list-style-image: url("../img/footer/placeholder.png");
-            }
+        list-style-position: inside;
+        list-style-image: url("../../img/footer/Vector.png");
+        a {
+            color: $color_3;
         }
     }
     &__copy {
         font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
         line-height: 21px;
-        letter-spacing: 0em;
-        color: $color_3;
         text-align: center;
         padding: 30px;
+    }
+}
+
+.contact-links {
+    margin-right: 80px;
+    @media (max-width: 767.98px) {
+        margin-right: 0px;
+    }
+}
+
+.contact-link {
+    &__email {
+        list-style-image: url("../../img/footer/envelope.png");
+    }
+    &__phone {
+        list-style-image: url("../../img/footer/phone.png");
+    }
+    &__address {
+        list-style-image: url("../../img/footer/placeholder.png");
     }
 }
