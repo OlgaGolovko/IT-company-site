@@ -16,8 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="app.js"></script>
     <title>IT company</title>
 </head>
 
@@ -185,7 +186,7 @@
                     <!-- <iframe class="video__video" id="video" src="https://www.youtube.com/embed/7twy1gjLR6A" title="YouTube video player" allow="accelerometer; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     <div class="video__video-container">
                         <video class="video__video" id="video" controls loop poster="img/video/prev-video.png">
-                        <source src="img/video/Что_я_вижу_кот_работает_за_компьютером.mp4" type='video/mp4;'>
+                        <source src="video/Что_я_вижу_кот_работает_за_компьютером.mp4" type='video/mp4'>
                     </video>
                     </div>
                 </div>
@@ -202,13 +203,21 @@
                     <p>Мы не шлем спам, и не передаем никому ваши данные.</p>
                 </div>
             </form>
+            <div class="map block">
+                <div class="map__container container">
+                    <h2 class="map__title title">Как нас найти</h2>
 
+                    <div id="map"></div>
+                </div>
+            </div>
         </main>
         <!-- @import "footer.html " -->
         <!-- </div> -->
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+
+    <script src="js/script.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLzcwhVkda29dy3BEMclQKWY62a84qNpc&callback=initMap">
+    </script>
 
 </body>
 

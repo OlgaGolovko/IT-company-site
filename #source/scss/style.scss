@@ -94,8 +94,10 @@ html body {
     background-image: url("../img/header/header_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
-    top: 0px;
-    left: 0px;
+    padding-top: 15%;
+    @media (min-width: 767.98px) {
+        padding-top: 3%;
+    }
     &__title {
         font-size: 34px;
         line-height: 34px;
@@ -249,8 +251,8 @@ html body {
         padding: 0px 0px 40px 0px;
     }
     &__img {
-        max-width: 100% auto;
-        max-height: 100% auto;
+        max-width: 100%;
+        max-height: 100%;
         margin-left: 0px;
         border-radius: 30px;
         @media (min-width: 1212px) {
@@ -447,7 +449,7 @@ html body {
 }
 
 .video {
-    width: 100% auto;
+    width: 100%;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../img/video/bg.jpg");
     background-position: 0 0;
     background-size: 100% 50vh;
@@ -588,5 +590,22 @@ html body {
         font-size: 13px;
         font-weight: 400;
         line-height: 21px;
+    }
+}
+
+.map {
+    // // width: 100%;
+    // height: auto;
+    background-color: $color_5;
+    &__container {
+        width: 100%;
+        padding-bottom: 7%;
+        border-bottom: 1px solid $color_4;
+    }
+    #map {
+        width: 100%;
+        display: block;
+        background-color: gray;
+        height: 500px;
     }
 }

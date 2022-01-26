@@ -16,8 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="app.js"></script>
     <title>IT company</title>
 </head>
 
@@ -27,19 +28,20 @@
     <div class="wrapper">
         <!-- <div class="container"> -->
         <header class="header block" id="header">
-    <!-- <div class="header__burger">
-        <span></span>
-    </div> -->
-    <!-- <div class="header__menu-container" id="menu">
-        <nav class="header__menu menu">
-            <a class="menu__link white-text" href="#header">Главная</a>
-            <a class="menu__link white-text" href="#all-projects">Наши проекты</a>
-            <a class="menu__link white-text" href="#services">Услуги</a>
-            <a class="menu__link white-text" href="#subscribe">Новости</a>
-            <a class="menu__link white-text" href="#contacts">Контакты</a>
-        </nav>
-    </div> -->
-
+    <div class="header__container container">
+        <div class="header__burger">
+            <span></span>
+        </div>
+        <div class="header__menu-container">
+            <nav class="header__menu menu" id="menu">
+                <a class="menu__link white-text" href="#first-screen">Главная</a>
+                <a class="menu__link white-text" href="#all-projects">Наши проекты</a>
+                <a class="menu__link white-text" href="#services">Услуги</a>
+                <a class="menu__link white-text" href="#subscribe">Новости</a>
+                <a class="menu__link white-text" href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </div>
 </header>
         <main class="main">
             <div class="first-screen block" id="first-screen">
@@ -199,7 +201,7 @@
                     <!-- <iframe class="video__video" id="video" src="https://www.youtube.com/embed/7twy1gjLR6A" title="YouTube video player" allow="accelerometer; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     <div class="video__video-container">
                         <video class="video__video" id="video" controls loop poster="img/video/prev-video.png">
-                        <source src="img/video/Что_я_вижу_кот_работает_за_компьютером.mp4" type='video/mp4;'>
+                        <source src="video/Что_я_вижу_кот_работает_за_компьютером.mp4" type='video/mp4'>
                     </video>
                     </div>
                 </div>
@@ -216,7 +218,13 @@
                     <p>Мы не шлем спам, и не передаем никому ваши данные.</p>
                 </div>
             </form>
+            <div class="map block">
+                <div class="map__container container">
+                    <h2 class="map__title title">Как нас найти</h2>
 
+                    <div id="map"></div>
+                </div>
+            </div>
         </main>
         <footer class="footer block">
     <nav class="footer__menu">
@@ -224,9 +232,9 @@
             <li class="footer__menu-link contact-links" id="contacts">Контактная информация
                 <span class="footer__menu-arrow  arrow"></span>
                 <ul class="footer__sub-menu-list">
-                    <li class="footer__sub-menu-link contact-link__email"><a href="mailto:test@test.ru">test@test.ru</a></li>
-                    <li class="footer__sub-menu-link contact-link__phone"><a href="tel:+87775556699">+8 777 555 66 99</a></li>
-                    <li class="footer__sub-menu-link contact-link__address"><a href="">Москва, Бульвар Ленина 33</a></li>
+                    <li class="footer__sub-menu-link contact-link__email"><a href="mailto:test@test.ru">test@test.com</a></li>
+                    <li class="footer__sub-menu-link contact-link__phone"><a href="tel:+380952222295">+380 95 22 222 95</a></li>
+                    <li class="footer__sub-menu-link contact-link__address"><a href="">ул. Небесной сотни, 15</a></li>
                 </ul>
             </li>
             <li class="footer__menu-link">Основные ссылки
@@ -258,13 +266,15 @@
             </li>
         </ul>
     </nav>
-    <div class="footer__copy ">(с) 2019. Все права защищены.</div>
+    <div class="footer__copy ">(с) 2022. Все права защищены.</div>
 
 </footer>
         <!-- </div> -->
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+
+    <script src="js/script.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLzcwhVkda29dy3BEMclQKWY62a84qNpc&callback=initMap">
+    </script>
 
 </body>
 
